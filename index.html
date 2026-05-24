@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English vocabulary library</title>
+<style>
+:root {
+  --bg: #f6f2ea;
+  --ink: #2b2622;
+  --muted: #6b625b;
+  --card: #fffdf8;
+  --line: #e6dfd2;
+  --accent: #8a4b3b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+  padding: 48px 24px 96px;
+}
+a { color: inherit; }
+header.page { max-width: 1200px; margin: 0 auto 40px; }
+header.page .crumb {
+  font-size: 0.85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+header.page .crumb a { text-decoration: none; border-bottom: 1px solid var(--line); }
+header.page .crumb a:hover { border-color: var(--accent); }
+header.page h1 {
+  margin: 0 0 8px; font-size: 2.4rem; font-weight: 600;
+  letter-spacing: -0.02em;
+}
+header.page p { margin: 0; color: var(--muted); font-size: 1rem; }
+section.group { max-width: 1200px; margin: 0 auto 48px; }
+section.group h2 {
+  font-size: 0.85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin: 0 0 16px;
+  border-bottom: 1px solid var(--line); padding-bottom: 10px;
+}
+
+.add-show {
+  max-width: 1200px; margin: 0 auto 32px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px 24px;
+}
+.add-show h2 {
+  margin: 0 0 6px; font-size: 1.05rem; letter-spacing: -0.01em;
+  text-transform: none; color: var(--ink); border: none; padding: 0;
+}
+.add-show p.hint { margin: 0 0 14px; color: var(--muted); font-size: 0.88rem; }
+.add-show form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px; align-items: stretch;
+}
+.add-show input {
+  font: inherit; padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: 8px;
+  background: #fcf9f1;
+}
+.add-show input:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.add-show button {
+  font: inherit; cursor: pointer; padding: 10px 18px;
+  background: var(--ink); color: var(--bg); border: none; border-radius: 8px;
+  font-weight: 600;
+}
+.add-show button:hover { background: var(--accent); }
+.add-show .result {
+  display: none; margin-top: 12px;
+  padding: 12px 14px; background: #fcf6e6; border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.95rem;
+  display: none; align-items: center; justify-content: space-between; gap: 12px;
+}
+.add-show .result.visible { display: flex; }
+.add-show .result code { background: transparent; padding: 0; flex: 1; word-break: break-all; }
+.add-show .result button { padding: 6px 12px; font-size: 0.82rem; }
+@media (max-width: 720px) {
+  .add-show form { grid-template-columns: 1fr; }
+}
+
+main.shows {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+a.show-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+a.show-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(40,30,20,0.08);
+}
+a.show-card .cover {
+  aspect-ratio: 3 / 2; background: #ede5d6;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+a.show-card .cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+a.show-card .cover .emoji { font-size: 4rem; opacity: 0.4; }
+a.show-card .show-body { padding: 18px 20px 22px; }
+a.show-card h2 {
+  margin: 0 0 6px; font-size: 1.6rem; letter-spacing: -0.01em;
+  text-transform: none; color: var(--ink); border: none; padding: 0;
+}
+a.show-card .meta { color: var(--muted); font-size: 0.92rem; margin: 0; }
+</style>
+</head>
+<body>
+    <header class="page">
+      <h1>English vocabulary library</h1>
+      <p>Advanced (C1/C2) words mined from TV show dialogue. Click a show to explore.</p>
+    </header>
+    
+    <section class="add-show">
+      <h2>Add a show</h2>
+      <p class="hint">Enter a show + season (and optionally an episode). The button copies a command — paste it into Claude to mine the vocabulary.</p>
+      <form id="add-show-form" onsubmit="return false;">
+        <input id="as-show" type="text" placeholder="Show name (e.g. Breaking Bad)" autocomplete="off" required>
+        <input id="as-season" type="number" min="1" placeholder="Season" required>
+        <input id="as-episode" type="number" min="1" placeholder="Episode (optional)">
+        <button type="button" onclick="buildCmd()">Generate command</button>
+      </form>
+      <div class="result" id="as-result">
+        <code id="as-cmd"></code>
+        <button type="button" onclick="copyCmd()">Copy</button>
+      </div>
+    </section>
+    <script>
+      function buildCmd() {
+        const show = document.getElementById('as-show').value.trim();
+        const season = document.getElementById('as-season').value.trim();
+        const episode = document.getElementById('as-episode').value.trim();
+        if (!show || !season) return;
+        let cmd = `/English ${show} season ${season}`;
+        if (episode) cmd += ` episode ${episode}`;
+        document.getElementById('as-cmd').textContent = cmd;
+        document.getElementById('as-result').classList.add('visible');
+      }
+      function copyCmd() {
+        const txt = document.getElementById('as-cmd').textContent;
+        navigator.clipboard.writeText(txt).then(() => {
+          const btn = event.target;
+          const orig = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => btn.textContent = orig, 1500);
+        });
+      }
+    </script>
+    
+    <main class="shows">
+      
+            <a class="show-card" href="friends/index.html">
+              <div class="cover"><img src="friends/cover.jpg" alt="" loading="lazy"></div>
+              <div class="show-body">
+                <h2>Friends</h2>
+                <p class="meta">10 words · 1 season · 1 episode</p>
+              </div>
+            </a>
+            
+            <a class="show-card" href="suits/index.html">
+              <div class="cover"><img src="suits/cover.jpg" alt="" loading="lazy"></div>
+              <div class="show-body">
+                <h2>Suits</h2>
+                <p class="meta">76 words · 1 season · 10 episodes</p>
+              </div>
+            </a>
+            
+    </main>
+    </body>
+</html>

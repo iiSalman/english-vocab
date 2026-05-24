@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Friends — vocabulary</title>
+<style>
+:root {
+  --bg: #f6f2ea;
+  --ink: #2b2622;
+  --muted: #6b625b;
+  --card: #fffdf8;
+  --line: #e6dfd2;
+  --accent: #8a4b3b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+  padding: 48px 24px 96px;
+}
+a { color: inherit; }
+header.page { max-width: 1200px; margin: 0 auto 40px; }
+header.page .crumb {
+  font-size: 0.85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+header.page .crumb a { text-decoration: none; border-bottom: 1px solid var(--line); }
+header.page .crumb a:hover { border-color: var(--accent); }
+header.page h1 {
+  margin: 0 0 8px; font-size: 2.4rem; font-weight: 600;
+  letter-spacing: -0.02em;
+}
+header.page p { margin: 0; color: var(--muted); font-size: 1rem; }
+section.group { max-width: 1200px; margin: 0 auto 48px; }
+section.group h2 {
+  font-size: 0.85rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.12em;
+  margin: 0 0 16px;
+  border-bottom: 1px solid var(--line); padding-bottom: 10px;
+}
+
+.hub {
+  max-width: 1200px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+a.hub-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px 20px;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 6px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+a.hub-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 22px rgba(40,30,20,0.06);
+}
+a.hub-card .label {
+  font-size: 0.72rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.1em;
+}
+a.hub-card .title {
+  font-size: 1.3rem; letter-spacing: -0.01em; color: var(--ink);
+}
+a.hub-card .count { color: var(--muted); font-size: 0.88rem; }
+</style>
+</head>
+<body>
+    <header class="page">
+      <div class="crumb"><a href="../index.html">← All shows</a></div>
+      <h1>Friends</h1>
+      <p>10 words across 1 season.</p>
+    </header>
+    <div style="max-width:1200px;margin:0 auto 24px;"><img src="cover.jpg" alt="" style="width:100%;max-width:900px;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin-bottom:24px;display:block;"></div>
+    <section class="group">
+      <h2>Overview</h2>
+      <div class="hub">
+    <a class="hub-card" href="general.html">
+      <span class="label">Overview</span>
+      <span class="title">General</span>
+      <span class="count">10 words · whole show</span>
+    </a>
+    </div>
+    </section>
+    
+    
+            <section class="group">
+              <h2>Season 1 — episodes</h2>
+              <div class="hub">
+                <a class="hub-card" href="season-1-episode-1.html">
+                  <span class="label">S1 · Episode 1</span>
+                  <span class="title">Episode 1</span>
+                  <span class="count">10 words</span>
+                </a>
+                </div>
+            </section>
+            
+    </body>
+</html>

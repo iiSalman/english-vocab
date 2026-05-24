@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Season 1 — vocabulary</title>
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --ink: #2b2622;
+    --muted: #6b625b;
+    --card: #fffdf8;
+    --line: #e6dfd2;
+    --accent: #8a4b3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+    padding: 48px 24px 96px;
+  }
+  header.page {
+    max-width: 1200px; margin: 0 auto 40px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header.page p {
+    margin: 0; color: var(--muted); font-size: 1rem;
+  }
+  main {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40,30,20,0.08);
+  }
+  .image {
+    aspect-ratio: 1 / 1;
+    background: #ede5d6;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .emoji { font-size: 5rem; opacity: 0.45; }
+  .card header { padding: 16px 18px 4px; }
+  .card h2 {
+    margin: 0 0 6px; font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .meta { display: flex; gap: 8px; align-items: center; }
+  .pos {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem; color: var(--muted); text-transform: lowercase;
+  }
+  .cefr {
+    color: white; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .defn {
+    margin: 12px 18px 8px;
+    font-size: 0.98rem; line-height: 1.5;
+  }
+  .source {
+    margin: 0 18px 8px;
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+  .why {
+    margin: 8px 18px 18px;
+    font-size: 0.85rem; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  
+.podcast {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fdf6e4;
+  border: 1px solid #e6dac0;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.podcast-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  flex-wrap: wrap;
+}
+.podcast-meta { display: flex; flex-direction: column; gap: 2px; }
+.podcast-meta .label {
+  font-size: 0.7rem; color: #8a4b3b;
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+.podcast-meta .title { font-size: 1.05rem; color: #2b2622; }
+.podcast-action { flex: 1; min-width: 240px; }
+.podcast-action audio { width: 100%; }
+.pod-btn {
+  font: inherit; cursor: pointer;
+  background: #2b2622; color: #f6f2ea; border: none;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.pod-btn:hover { background: #8a4b3b; }
+.pod-status { color: #6b625b; font-size: 0.92rem; font-style: italic; }
+.pod-error { color: #9b3b3b; font-size: 0.88rem; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pod-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+}
+.pod-regen, .pod-download {
+  font-size: 0.78rem; color: #6b625b;
+  background: none; border: none; cursor: pointer;
+  text-decoration: underline; padding: 0;
+  font-family: inherit;
+}
+.pod-regen:hover, .pod-download:hover { color: #8a4b3b; }
+.pod-download { text-decoration: underline; }
+
+  header.page .crumb {
+    font-size: 0.85rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  header.page .crumb a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  header.page .crumb a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="page">
+    <div class="crumb"><a href="../index.html">← All shows</a> · <a href="index.html">Suits</a></div>
+    <h1>Season 1 — vocabulary</h1>
+    <p>5 advanced (C1/C2) words and phrases. Hover a card for emphasis. Open in any modern browser.</p>
+  </header>
+  
+<section class="podcast" data-slug="suits" data-section="season-1-episode-4" data-audio="audio/season-1-episode-4.mp3">
+  <div class="podcast-inner">
+    <div class="podcast-meta">
+      <span class="label">Audio overview</span>
+      <span class="title">Short NotebookLM podcast for this page</span>
+    </div>
+    <div class="podcast-action">Checking…</div>
+  </div>
+</section>
+<script>
+(function() {
+  const el = document.currentScript.previousElementSibling;
+  const slug = el.dataset.slug, section = el.dataset.section, audioRel = el.dataset.audio;
+  const action = el.querySelector('.podcast-action');
+  const SERVER = 'http://127.0.0.1:8765';
+
+  async function checkExisting() {
+    try {
+      const r = await fetch(audioRel, { method: 'HEAD' });
+      if (r.ok) return showPlayer(audioRel);
+    } catch (_) {}
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'generating') return showGenerating();
+        if (data.status === 'error') return showError(data.message || 'last attempt failed');
+      }
+    } catch (_) {}
+    showButton();
+  }
+  function showPlayer(url) {
+    const filename = slug + '-' + section + '.mp3';
+    action.innerHTML =
+      '<audio controls src="' + url + '"></audio>' +
+      '<div class="pod-actions">' +
+        '<a class="pod-download" href="' + url + '" download="' + filename + '">⬇ Download</a>' +
+      '</div>';
+  }
+  function showButton() {
+    action.innerHTML = '<button class="pod-btn">🎧 Generate podcast</button>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  function showGenerating() {
+    action.innerHTML = '<div class="pod-status">Generating podcast via NotebookLM… (a few minutes)</div>';
+    poll();
+  }
+  function showError(msg) {
+    action.innerHTML = '<div class="pod-error"><span>Error: ' + msg + '</span><button class="pod-btn">Retry</button></div>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  async function generate(force) {
+    showGenerating();
+    try {
+      const r = await fetch(SERVER + '/podcast', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ slug: slug, section: section, force: !!force })
+      });
+      if (!r.ok) {
+        let d = {}; try { d = await r.json(); } catch (_) {}
+        return showError(d.message || ('server returned ' + r.status));
+      }
+    } catch (_) {
+      return showError('local server not running — start it with: python3 ~/.claude/skills/english/scripts/server.py');
+    }
+    poll();
+  }
+  async function poll() {
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'error') return showError(data.message || 'generation failed');
+      }
+    } catch (_) {}
+    setTimeout(poll, 4000);
+  }
+  checkExisting();
+})();
+</script>
+
+  <main>
+    
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-4/testify.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>testify</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to give evidence as a witness, especially in a court of law.</p>
+              <p class="source">S1E4 — &quot;I tracked down 15 former tenants who are willing to testify to all manner of harassment.&quot;</p>
+              <p class="why">every legal storyline turns on who is willing to testify — central courtroom verb across the season.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-4/mitigate.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>mitigate</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to make a problem, harm, or punishment less severe.</p>
+              <p class="source">S1E4 — &quot;If you don&#x27;t tell us the real facts, we can&#x27;t mitigate the damage from his lie.&quot;</p>
+              <p class="why">lawyers&#x27; word for damage-control — used whenever the firm is doing repair work on a bad situation.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-4/liable.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>liable</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">legally responsible for something, especially for paying damages.</p>
+              <p class="source">S1E4 — &quot;The company may be liable for actual damages, but we can shift the blame for the fraud to Lisa.&quot;</p>
+              <p class="why">the core question of nearly every civil case the firm handles — who is liable for what.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-4/extortion.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>extortion</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the criminal act of obtaining money or favours through threats or pressure.</p>
+              <p class="source">S1E4 — &quot;I don&#x27;t take to extortion.&quot;</p>
+              <p class="why">Harvey throws this word back at opponents who try to strong-arm him — a recurring power-move accusation.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-4/pending.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>pending</h2>
+                <div class="meta">
+                  <span class="pos">prep</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">while waiting for; until something happens. Also adjective: about to happen.</p>
+              <p class="source">S1E4 — &quot;Pending the outcome of a rent abatement hearing? That&#x27;s not in the code.&quot;</p>
+              <p class="why">a useful formal preposition for legal/business writing — describes the limbo state between filing and ruling.</p>
+            </article>
+            
+  </main>
+</body>
+</html>

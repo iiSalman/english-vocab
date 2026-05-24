@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Season 1 — vocabulary</title>
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --ink: #2b2622;
+    --muted: #6b625b;
+    --card: #fffdf8;
+    --line: #e6dfd2;
+    --accent: #8a4b3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+    padding: 48px 24px 96px;
+  }
+  header.page {
+    max-width: 1200px; margin: 0 auto 40px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header.page p {
+    margin: 0; color: var(--muted); font-size: 1rem;
+  }
+  main {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40,30,20,0.08);
+  }
+  .image {
+    aspect-ratio: 1 / 1;
+    background: #ede5d6;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .emoji { font-size: 5rem; opacity: 0.45; }
+  .card header { padding: 16px 18px 4px; }
+  .card h2 {
+    margin: 0 0 6px; font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .meta { display: flex; gap: 8px; align-items: center; }
+  .pos {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem; color: var(--muted); text-transform: lowercase;
+  }
+  .cefr {
+    color: white; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .defn {
+    margin: 12px 18px 8px;
+    font-size: 0.98rem; line-height: 1.5;
+  }
+  .source {
+    margin: 0 18px 8px;
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+  .why {
+    margin: 8px 18px 18px;
+    font-size: 0.85rem; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  
+.podcast {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fdf6e4;
+  border: 1px solid #e6dac0;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.podcast-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  flex-wrap: wrap;
+}
+.podcast-meta { display: flex; flex-direction: column; gap: 2px; }
+.podcast-meta .label {
+  font-size: 0.7rem; color: #8a4b3b;
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+.podcast-meta .title { font-size: 1.05rem; color: #2b2622; }
+.podcast-action { flex: 1; min-width: 240px; }
+.podcast-action audio { width: 100%; }
+.pod-btn {
+  font: inherit; cursor: pointer;
+  background: #2b2622; color: #f6f2ea; border: none;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.pod-btn:hover { background: #8a4b3b; }
+.pod-status { color: #6b625b; font-size: 0.92rem; font-style: italic; }
+.pod-error { color: #9b3b3b; font-size: 0.88rem; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pod-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+}
+.pod-regen, .pod-download {
+  font-size: 0.78rem; color: #6b625b;
+  background: none; border: none; cursor: pointer;
+  text-decoration: underline; padding: 0;
+  font-family: inherit;
+}
+.pod-regen:hover, .pod-download:hover { color: #8a4b3b; }
+.pod-download { text-decoration: underline; }
+
+  header.page .crumb {
+    font-size: 0.85rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  header.page .crumb a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  header.page .crumb a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="page">
+    <div class="crumb"><a href="../index.html">← All shows</a> · <a href="index.html">Suits</a></div>
+    <h1>Season 1 — vocabulary</h1>
+    <p>25 advanced (C1/C2) words and phrases. Hover a card for emphasis. Open in any modern browser.</p>
+  </header>
+  
+<section class="podcast" data-slug="suits" data-section="season-1" data-audio="audio/season-1.mp3">
+  <div class="podcast-inner">
+    <div class="podcast-meta">
+      <span class="label">Audio overview</span>
+      <span class="title">Short NotebookLM podcast for this page</span>
+    </div>
+    <div class="podcast-action">Checking…</div>
+  </div>
+</section>
+<script>
+(function() {
+  const el = document.currentScript.previousElementSibling;
+  const slug = el.dataset.slug, section = el.dataset.section, audioRel = el.dataset.audio;
+  const action = el.querySelector('.podcast-action');
+  const SERVER = 'http://127.0.0.1:8765';
+
+  async function checkExisting() {
+    try {
+      const r = await fetch(audioRel, { method: 'HEAD' });
+      if (r.ok) return showPlayer(audioRel);
+    } catch (_) {}
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'generating') return showGenerating();
+        if (data.status === 'error') return showError(data.message || 'last attempt failed');
+      }
+    } catch (_) {}
+    showButton();
+  }
+  function showPlayer(url) {
+    const filename = slug + '-' + section + '.mp3';
+    action.innerHTML =
+      '<audio controls src="' + url + '"></audio>' +
+      '<div class="pod-actions">' +
+        '<a class="pod-download" href="' + url + '" download="' + filename + '">⬇ Download</a>' +
+      '</div>';
+  }
+  function showButton() {
+    action.innerHTML = '<button class="pod-btn">🎧 Generate podcast</button>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  function showGenerating() {
+    action.innerHTML = '<div class="pod-status">Generating podcast via NotebookLM… (a few minutes)</div>';
+    poll();
+  }
+  function showError(msg) {
+    action.innerHTML = '<div class="pod-error"><span>Error: ' + msg + '</span><button class="pod-btn">Retry</button></div>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  async function generate(force) {
+    showGenerating();
+    try {
+      const r = await fetch(SERVER + '/podcast', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ slug: slug, section: section, force: !!force })
+      });
+      if (!r.ok) {
+        let d = {}; try { d = await r.json(); } catch (_) {}
+        return showError(d.message || ('server returned ' + r.status));
+      }
+    } catch (_) {
+      return showError('local server not running — start it with: python3 ~/.claude/skills/english/scripts/server.py');
+    }
+    poll();
+  }
+  async function poll() {
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'error') return showError(data.message || 'generation failed');
+      }
+    } catch (_) {}
+    setTimeout(poll, 4000);
+  }
+  checkExisting();
+})();
+</script>
+
+  <main>
+    
+            <article class="card">
+              <div class="image"><img src="assets/season-1/injunction.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>injunction</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">an official court order that forces someone to do something or, more commonly, to stop doing something.</p>
+              <p class="source">S1E4 — &quot;If you don&#x27;t sign my injunction, there&#x27;s going to be a lawsuit.&quot;</p>
+              <p class="why">drives the central legal conflict of multiple episodes — Harvey wins or loses cases on whether he can get one issued or overturned.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/escrow.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>escrow</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">money or assets held by a neutral third party until the conditions of an agreement are met.</p>
+              <p class="source">S1E1 — &quot;I received confirmation of a wire transfer from escrow indicating payment in full.&quot;</p>
+              <p class="why">Harvey uses it as a power move in the opening scene to prove the deal is already locked in.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/deposition.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>deposition</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a formal sworn statement made out of court, used as evidence at trial.</p>
+              <p class="source">S1E6 — &quot;We&#x27;ll see how confident you are after my deposition.&quot;</p>
+              <p class="why">depositions are where most of the season&#x27;s legal pressure is applied — a frequent battleground for the lawyers.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/subpoena.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>subpoena</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">an official legal document ordering a person to appear in court or produce documents.</p>
+              <p class="source">S1E5 — &quot;I&#x27;ll have a subpoena on his desk by morning.&quot;</p>
+              <p class="why">a recurring weapon throughout the season — characters constantly threaten or issue them.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/perjury.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>perjury</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the criminal offence of telling a lie in court after swearing to tell the truth.</p>
+              <p class="source">S1E7 — &quot;If he testifies to that, it&#x27;s perjury.&quot;</p>
+              <p class="why">a key risk for several characters in S1 — the threat of perjury changes who is willing to testify.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/retainer.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>retainer</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a fee paid in advance to a lawyer to secure their services.</p>
+              <p class="source">S1E6 — &quot;Before we get started, there&#x27;s something in the retainer that Tom pointed out.&quot;</p>
+              <p class="why">signals the formal start of a lawyer-client relationship — comes up whenever a new client is signed.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/plaintiff.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>plaintiff</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the person who brings a case against another in a court of law.</p>
+              <p class="source">S1E4 — &quot;Our client is the plaintiff here, not the defendant.&quot;</p>
+              <p class="why">appears constantly — knowing which side is the plaintiff and which is the defendant is essential to following any scene in court.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/litigation.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>litigation</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the process of taking legal action; a lawsuit.</p>
+              <p class="source">S1E4 — &quot;I&#x27;ve decided to leave the bench. Try my hand at litigation.&quot;</p>
+              <p class="why">the firm&#x27;s whole business — the word appears whenever the season&#x27;s larger strategy is discussed.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/disbarred.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>disbarred</h2>
+                <div class="meta">
+                  <span class="pos">adj/v</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">officially banned from practising as a lawyer.</p>
+              <p class="source">S1E11 — &quot;In which case, I&#x27;ll have you disbarred.&quot;</p>
+              <p class="why">the ultimate professional threat — used at the season&#x27;s most charged moments. Carries far more weight than &quot;fired&quot;.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/overturn.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>overturn</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to officially decide that an earlier legal decision was wrong and change it.</p>
+              <p class="source">S1E4 — &quot;When the next judge sees all the facts, he&#x27;s going to overturn your ruling.&quot;</p>
+              <p class="why">the standard verb for undoing rulings on appeal — appears whenever a court loss is being challenged.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/devious.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>devious</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">willing to lie and trick people to get what you want.</p>
+              <p class="source">S1E8 — &quot;Kyle is cocky and devious.&quot;</p>
+              <p class="why">the show keeps describing characters with this word — it&#x27;s central to how the firm sizes up rivals and even their own people.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/vindictive.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>vindictive</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">deliberately trying to harm someone in revenge for something they did to you.</p>
+              <p class="source">S1E12 — &quot;I&#x27;m not being vindictive.&quot;</p>
+              <p class="why">drives multiple characters&#x27; motivations — especially when grudges from earlier episodes resurface.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/patronizing.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>patronizing</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">speaking to or treating someone as if you are more important or intelligent than them.</p>
+              <p class="source">S1E1 — &quot;It&#x27;s just so patronizing when you say that he can handle those things.&quot;</p>
+              <p class="why">Louis&#x27;s defining complaint — the word captures the office hierarchy and his resentment of Harvey.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/condescending.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>condescending</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">behaving as though you are better or more important than other people; very close to *patronizing*.</p>
+              <p class="source">S1E1 — Louis complains about Harvey&#x27;s condescending tone.</p>
+              <p class="why">pairs with *patronizing* throughout the season; both describe the social tension you&#x27;ll hear in almost every Louis/Harvey scene.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/sterling.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>sterling</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">excellent in quality, especially when describing a reputation or character.</p>
+              <p class="source">S1E4 — &quot;But that sterling reputation that you value so highly? Down the tubes.&quot;</p>
+              <p class="why">used twice in S1 to discuss a lawyer&#x27;s professional reputation — a common collocation: *sterling reputation*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/smoking-gun.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>smoking gun</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a piece of evidence that proves clearly and finally that someone is guilty.</p>
+              <p class="source">S1E5 — &quot;Where&#x27;s my smoking gun? The background check that confirmed Stan lied about his credentials.&quot;</p>
+              <p class="why">recurs throughout the season — Harvey is constantly looking for one. Knowing the idiom is essential to following case strategy talk.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/come-clean.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>come clean</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to admit the full truth about something you have been hiding.</p>
+              <p class="source">S1E3 — &quot;Quentin wants to come clean.&quot;</p>
+              <p class="why">appears at the climax of multiple episodes — a character &quot;coming clean&quot; usually shifts the entire case.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/blow-the-whistle.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>blow the whistle</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to publicly report wrongdoing, usually in an organisation you belong to.</p>
+              <p class="source">S1E8 — &quot;You can blow the whistle on me if you want to.&quot;</p>
+              <p class="why">plot-critical idiom in the corporate-fraud storyline — used as both a threat and an offer of redemption.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/out-of-line.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>out of line</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">behaving in a way that is unacceptable, rude, or beyond what is allowed.</p>
+              <p class="source">S1E1 — &quot;Louis, I apologize. I was out of line.&quot;</p>
+              <p class="why">the standard apology phrase in workplace conflicts — you&#x27;ll hear it whenever an argument cools down.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/quid-pro-quo.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>quid pro quo</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">a Latin phrase meaning a favour or advantage given in exchange for something of equal value.</p>
+              <p class="source">S1E4 — &quot;Perhaps we could discuss a little quid pro quo before I do.&quot;</p>
+              <p class="why">a signature legal-thriller phrase — the negotiating tool Harvey and his rivals reach for when they want a clean trade.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/the-ball-is-in-your-court.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>the ball is in your court</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">it is now your turn to act or make a decision.</p>
+              <p class="source">S1E1 — &quot;So, I&#x27;d say the ball&#x27;s in your court.&quot;</p>
+              <p class="why">Harvey&#x27;s go-to closing line in negotiations — repeated by other characters when they want to pressure someone for a response.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/proclivities.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>proclivities</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">tendencies to behave or think in a particular way, especially one that is criticised.</p>
+              <p class="source">S1E2 — &quot;If someone of his generation who shares the same proclivities…&quot;</p>
+              <p class="why">Louis uses formal vocabulary to soften ugly suggestions — recognising this kind of word is key to catching when a character is hiding intent behind politeness.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/barge-in.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>barge in</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to enter a room or interrupt a conversation rudely and without permission.</p>
+              <p class="source">S1E2 — &quot;You don&#x27;t barge in here when I&#x27;m on the phone.&quot;</p>
+              <p class="why">the boundary-setting verb of the office scenes — characters constantly accuse each other of barging in.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/woo.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>woo</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to try to persuade someone to support you, especially as a customer or romantic partner.</p>
+              <p class="source">S1E2 — &quot;Back in the day, to woo a client, you would take them to dinner.&quot;</p>
+              <p class="why">in *Suits* it always describes the business of attracting clients — the verb behind every client-pitch scene.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1/cachet.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>cachet</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">the quality of being respected or admired, especially because of being associated with something prestigious.</p>
+              <p class="source">S1E1 — &quot;The fact that we only hire from Harvard gives us a cachet.&quot;</p>
+              <p class="why">explains the firm&#x27;s whole hiring philosophy in one word — and a useful term whenever the show contrasts prestige with merit.</p>
+            </article>
+            
+  </main>
+</body>
+</html>
