@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Season 1 — vocabulary</title>
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --ink: #2b2622;
+    --muted: #6b625b;
+    --card: #fffdf8;
+    --line: #e6dfd2;
+    --accent: #8a4b3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+    padding: 48px 24px 96px;
+  }
+  header.page {
+    max-width: 1200px; margin: 0 auto 40px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header.page p {
+    margin: 0; color: var(--muted); font-size: 1rem;
+  }
+  main {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40,30,20,0.08);
+  }
+  .image {
+    aspect-ratio: 1 / 1;
+    background: #ede5d6;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .emoji { font-size: 5rem; opacity: 0.45; }
+  .card header { padding: 16px 18px 4px; }
+  .card h2 {
+    margin: 0 0 6px; font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .meta { display: flex; gap: 8px; align-items: center; }
+  .pos {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem; color: var(--muted); text-transform: lowercase;
+  }
+  .cefr {
+    color: white; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .defn {
+    margin: 12px 18px 8px;
+    font-size: 0.98rem; line-height: 1.5;
+  }
+  .source {
+    margin: 0 18px 8px;
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+  .why {
+    margin: 8px 18px 18px;
+    font-size: 0.85rem; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  
+.podcast {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fdf6e4;
+  border: 1px solid #e6dac0;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.podcast-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  flex-wrap: wrap;
+}
+.podcast-meta { display: flex; flex-direction: column; gap: 2px; }
+.podcast-meta .label {
+  font-size: 0.7rem; color: #8a4b3b;
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+.podcast-meta .title { font-size: 1.05rem; color: #2b2622; }
+.podcast-action { flex: 1; min-width: 240px; }
+.podcast-action audio { width: 100%; }
+.pod-btn {
+  font: inherit; cursor: pointer;
+  background: #2b2622; color: #f6f2ea; border: none;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.pod-btn:hover { background: #8a4b3b; }
+.pod-status { color: #6b625b; font-size: 0.92rem; font-style: italic; }
+.pod-error { color: #9b3b3b; font-size: 0.88rem; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pod-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+}
+.pod-regen, .pod-download {
+  font-size: 0.78rem; color: #6b625b;
+  background: none; border: none; cursor: pointer;
+  text-decoration: underline; padding: 0;
+  font-family: inherit;
+}
+.pod-regen:hover, .pod-download:hover { color: #8a4b3b; }
+.pod-download { text-decoration: underline; }
+
+  header.page .crumb {
+    font-size: 0.85rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  header.page .crumb a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  header.page .crumb a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="page">
+    <div class="crumb"><a href="../index.html">← All shows</a> · <a href="index.html">Friends</a></div>
+    <h1>Season 1 — vocabulary</h1>
+    <p>17 advanced (C1/C2) words and phrases. Hover a card for emphasis. Open in any modern browser.</p>
+  </header>
+  
+<section class="podcast" data-slug="friends" data-section="season-1-episode-3" data-audio="audio/season-1-episode-3.mp3">
+  <div class="podcast-inner">
+    <div class="podcast-meta">
+      <span class="label">Audio overview</span>
+      <span class="title">Short NotebookLM podcast for this page</span>
+    </div>
+    <div class="podcast-action">Checking…</div>
+  </div>
+</section>
+<script>
+(function() {
+  const el = document.currentScript.previousElementSibling;
+  const slug = el.dataset.slug, section = el.dataset.section, audioRel = el.dataset.audio;
+  const action = el.querySelector('.podcast-action');
+  const SERVER = 'http://127.0.0.1:8765';
+
+  async function checkExisting() {
+    try {
+      const r = await fetch(audioRel, { method: 'HEAD' });
+      if (r.ok) return showPlayer(audioRel);
+    } catch (_) {}
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'generating') return showGenerating();
+        if (data.status === 'error') return showError(data.message || 'last attempt failed');
+      }
+    } catch (_) {}
+    showButton();
+  }
+  function showPlayer(url) {
+    const filename = slug + '-' + section + '.mp3';
+    action.innerHTML =
+      '<audio controls src="' + url + '"></audio>' +
+      '<div class="pod-actions">' +
+        '<a class="pod-download" href="' + url + '" download="' + filename + '">⬇ Download</a>' +
+      '</div>';
+  }
+  function showButton() {
+    action.innerHTML = '<button class="pod-btn">🎧 Generate podcast</button>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  function showGenerating() {
+    action.innerHTML = '<div class="pod-status">Generating podcast via NotebookLM… (a few minutes)</div>';
+    poll();
+  }
+  function showError(msg) {
+    action.innerHTML = '<div class="pod-error"><span>Error: ' + msg + '</span><button class="pod-btn">Retry</button></div>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  async function generate(force) {
+    showGenerating();
+    try {
+      const r = await fetch(SERVER + '/podcast', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ slug: slug, section: section, force: !!force })
+      });
+      if (!r.ok) {
+        let d = {}; try { d = await r.json(); } catch (_) {}
+        return showError(d.message || ('server returned ' + r.status));
+      }
+    } catch (_) {
+      return showError('local server not running — start it with: python3 ~/.claude/skills/english/scripts/server.py');
+    }
+    poll();
+  }
+  async function poll() {
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'error') return showError(data.message || 'generation failed');
+      }
+    } catch (_) {}
+    setTimeout(poll, 4000);
+  }
+  checkExisting();
+})();
+</script>
+
+  <main>
+    
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/cushion-the-blow.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>cushion the blow</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to soften the impact of bad news or a painful experience.</p>
+              <p class="source">S1E3 — Joey explaining dating euphemisms: &quot;Cushions the blow. Like your parents putting the dog to sleep and saying it went to a farm.&quot;</p>
+              <p class="why">elegant idiom for breaking bad news gently — common in HR, medicine, journalism, relationships.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/minion.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>minion</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a low-ranking follower or servant of a powerful person — often used humorously or with disdain.</p>
+              <p class="source">S1E3 — Phoebe about the bank crediting her too much money: &quot;Satan&#x27;s minions at work again!&quot;</p>
+              <p class="why">very common in fantasy, politics, and office sarcasm (*the boss&#x27;s minions*). Took on extra cultural weight from the Despicable Me films.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/karmic.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>karmic</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">relating to karma; reflecting the moral consequences of past actions.</p>
+              <p class="source">S1E3 — Phoebe about spending money that isn&#x27;t hers: &quot;It&#x27;d be this giant karmic debt.&quot;</p>
+              <p class="why">signals an introspective, slightly spiritual register — common in modern English to talk about cause-and-effect outside religion.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/pick-off.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>pick off</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to remove or eliminate one at a time, often by targeting the weakest.</p>
+              <p class="source">S1E3 — Rachel about her friends judging her dates: &quot;Coyotes picking off the weak members of the herd.&quot;</p>
+              <p class="why">evocative phrasal — used literally (snipers, predators) and figuratively (competitors, job candidates).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/odds.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>odds</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the probability or likelihood that something will happen; the ratio of chances for vs. against.</p>
+              <p class="source">S1E3 — Monica to Rachel: &quot;The odds of that happening are slimmer if they never get to meet the guy.&quot;</p>
+              <p class="why">essential vocabulary for probability, gambling, and forecasting — *the odds are good/against you*, *beat the odds*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/whimper.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>whimper</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to make low, weak crying or complaining sounds — like a hurt animal.</p>
+              <p class="source">S1E3 — Ross to Monica about losing the dog: &quot;Can&#x27;t I whimper a little bit?&quot;</p>
+              <p class="why">more specific than *cry* — implies quiet, pathetic distress. Also famous from T.S. Eliot: *&quot;Not with a bang but a whimper.&quot;*</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/crooked.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>crooked</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">bent or twisted out of shape; also figuratively dishonest or corrupt.</p>
+              <p class="source">S1E3 — Phoebe praising Alan: &quot;His smile was crooked. Like the man in the shoe.&quot;</p>
+              <p class="why">two distinct uses — physical (*a crooked nose*) and moral (*a crooked politician*). Both very common.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/yardstick.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>yardstick</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">a standard or measure used to judge or compare; figuratively, a benchmark.</p>
+              <p class="source">S1E3 — Rachel about Alan: &quot;He is the yardstick by which future boyfriends will be measured.&quot;</p>
+              <p class="why">formal/literary metaphor — common in essays, reviews, and management talk. Pairs with *benchmark*, *gold standard*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/innate.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>innate</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">present from birth; existing as a natural, inherent quality.</p>
+              <p class="source">S1E3 — Chandler being absurdly sincere about Alan: &quot;It&#x27;s his innate &#x27;Alan-ness&#x27; that we adore.&quot;</p>
+              <p class="why">academic and psychological register — *innate talent*, *innate ability*, *innate goodness*. Opposite of *learned* or *acquired*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/flaw.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>flaw</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">an imperfection or weakness — in an object, plan, character, or argument.</p>
+              <p class="source">S1E3 — Chandler defending his smoking: &quot;So I have a flaw! Big deal!&quot;</p>
+              <p class="why">core vocabulary for criticism — *a fatal flaw*, *a character flaw*, *a flaw in the design*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/snort.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>snort</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to make a sudden, harsh sound through the nose, often when laughing or in disgust.</p>
+              <p class="source">S1E3 — Chandler listing his friends&#x27; annoying habits: &quot;Monica, who snorts when she laughs.&quot;</p>
+              <p class="why">very specific sound-verb — also used for animals (*the horse snorted*) and as a noun (*a snort of laughter*).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/endearing.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>endearing</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">inspiring affection; charming in a sweet, sometimes clumsy way.</p>
+              <p class="source">S1E3 — Phoebe about Joey&#x27;s knuckle-cracking: &quot;I think it&#x27;s endearing.&quot;</p>
+              <p class="why">the precise word for &quot;annoying-but-cute&quot; — often used to describe quirks, accents, or small habits in loved ones.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/bottom-line.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>bottom line</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the most important fact or final conclusion; figuratively the core point of an argument.</p>
+              <p class="source">S1E3 — Chandler defiantly: &quot;The bottom line is, smoking is cool, and you know it.&quot;</p>
+              <p class="why">essential business and conversation phrase — *what&#x27;s the bottom line?* cuts straight to the point.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/d-j-vu.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>déjà vu</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">the strange feeling that you have already experienced the current moment.</p>
+              <p class="source">S1E3 — Phoebe: &quot;Wait! I&#x27;m getting a déjà vu. No, I&#x27;m not.&quot;</p>
+              <p class="why">borrowed from French and fully naturalized in English — used both literally (the eerie feeling) and figuratively (*it felt like déjà vu*).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/let-one-s-guard-down.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>let one&#x27;s guard down</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to relax one&#x27;s emotional defences; to become vulnerable after being cautious.</p>
+              <p class="source">S1E3 — Alan to Monica after the breakup: &quot;You let your guard down. You start to care about someone, and…&quot;</p>
+              <p class="why">boxing metaphor for emotional risk — central to relationship and therapy talk.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/can-t-stand.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>can&#x27;t stand</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to strongly dislike; to be unable to tolerate someone or something.</p>
+              <p class="source">S1E3 — Alan after breaking up: &quot;I had a great time with you. I just can&#x27;t stand your friends.&quot;</p>
+              <p class="why">the most common informal way to express strong dislike in English — stronger than *don&#x27;t like*, softer than *hate*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-3/gloves-come-off.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>gloves come off</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">the point at which people stop being polite and start fighting seriously — verbal or otherwise.</p>
+              <p class="source">S1E3 — Chandler narrating after Monica snaps back: &quot;The hair comes out and the gloves come off.&quot;</p>
+              <p class="why">boxing-derived idiom signaling escalation — common in politics, debates, sports, and arguments. Often paired with *take the gloves off*.</p>
+            </article>
+            
+  </main>
+</body>
+</html>
