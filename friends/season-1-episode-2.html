@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Season 1 — vocabulary</title>
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --ink: #2b2622;
+    --muted: #6b625b;
+    --card: #fffdf8;
+    --line: #e6dfd2;
+    --accent: #8a4b3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+    padding: 48px 24px 96px;
+  }
+  header.page {
+    max-width: 1200px; margin: 0 auto 40px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header.page p {
+    margin: 0; color: var(--muted); font-size: 1rem;
+  }
+  main {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40,30,20,0.08);
+  }
+  .image {
+    aspect-ratio: 1 / 1;
+    background: #ede5d6;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .emoji { font-size: 5rem; opacity: 0.45; }
+  .card header { padding: 16px 18px 4px; }
+  .card h2 {
+    margin: 0 0 6px; font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .meta { display: flex; gap: 8px; align-items: center; }
+  .pos {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem; color: var(--muted); text-transform: lowercase;
+  }
+  .cefr {
+    color: white; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .defn {
+    margin: 12px 18px 8px;
+    font-size: 0.98rem; line-height: 1.5;
+  }
+  .source {
+    margin: 0 18px 8px;
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+  .why {
+    margin: 8px 18px 18px;
+    font-size: 0.85rem; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  
+.podcast {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fdf6e4;
+  border: 1px solid #e6dac0;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.podcast-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  flex-wrap: wrap;
+}
+.podcast-meta { display: flex; flex-direction: column; gap: 2px; }
+.podcast-meta .label {
+  font-size: 0.7rem; color: #8a4b3b;
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+.podcast-meta .title { font-size: 1.05rem; color: #2b2622; }
+.podcast-action { flex: 1; min-width: 240px; }
+.podcast-action audio { width: 100%; }
+.pod-btn {
+  font: inherit; cursor: pointer;
+  background: #2b2622; color: #f6f2ea; border: none;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.pod-btn:hover { background: #8a4b3b; }
+.pod-status { color: #6b625b; font-size: 0.92rem; font-style: italic; }
+.pod-error { color: #9b3b3b; font-size: 0.88rem; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pod-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+}
+.pod-regen, .pod-download {
+  font-size: 0.78rem; color: #6b625b;
+  background: none; border: none; cursor: pointer;
+  text-decoration: underline; padding: 0;
+  font-family: inherit;
+}
+.pod-regen:hover, .pod-download:hover { color: #8a4b3b; }
+.pod-download { text-decoration: underline; }
+
+  header.page .crumb {
+    font-size: 0.85rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  header.page .crumb a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  header.page .crumb a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="page">
+    <div class="crumb"><a href="../index.html">← All shows</a> · <a href="index.html">Friends</a></div>
+    <h1>Season 1 — vocabulary</h1>
+    <p>18 advanced (C1/C2) words and phrases. Hover a card for emphasis. Open in any modern browser.</p>
+  </header>
+  
+<section class="podcast" data-slug="friends" data-section="season-1-episode-2" data-audio="audio/season-1-episode-2.mp3">
+  <div class="podcast-inner">
+    <div class="podcast-meta">
+      <span class="label">Audio overview</span>
+      <span class="title">Short NotebookLM podcast for this page</span>
+    </div>
+    <div class="podcast-action">Checking…</div>
+  </div>
+</section>
+<script>
+(function() {
+  const el = document.currentScript.previousElementSibling;
+  const slug = el.dataset.slug, section = el.dataset.section, audioRel = el.dataset.audio;
+  const action = el.querySelector('.podcast-action');
+  const SERVER = 'http://127.0.0.1:8765';
+
+  async function checkExisting() {
+    try {
+      const r = await fetch(audioRel, { method: 'HEAD' });
+      if (r.ok) return showPlayer(audioRel);
+    } catch (_) {}
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'generating') return showGenerating();
+        if (data.status === 'error') return showError(data.message || 'last attempt failed');
+      }
+    } catch (_) {}
+    showButton();
+  }
+  function showPlayer(url) {
+    const filename = slug + '-' + section + '.mp3';
+    action.innerHTML =
+      '<audio controls src="' + url + '"></audio>' +
+      '<div class="pod-actions">' +
+        '<a class="pod-download" href="' + url + '" download="' + filename + '">⬇ Download</a>' +
+      '</div>';
+  }
+  function showButton() {
+    action.innerHTML = '<button class="pod-btn">🎧 Generate podcast</button>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  function showGenerating() {
+    action.innerHTML = '<div class="pod-status">Generating podcast via NotebookLM… (a few minutes)</div>';
+    poll();
+  }
+  function showError(msg) {
+    action.innerHTML = '<div class="pod-error"><span>Error: ' + msg + '</span><button class="pod-btn">Retry</button></div>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  async function generate(force) {
+    showGenerating();
+    try {
+      const r = await fetch(SERVER + '/podcast', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ slug: slug, section: section, force: !!force })
+      });
+      if (!r.ok) {
+        let d = {}; try { d = await r.json(); } catch (_) {}
+        return showError(d.message || ('server returned ' + r.status));
+      }
+    } catch (_) {
+      return showError('local server not running — start it with: python3 ~/.claude/skills/english/scripts/server.py');
+    }
+    poll();
+  }
+  async function poll() {
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'error') return showError(data.message || 'generation failed');
+      }
+    } catch (_) {}
+    setTimeout(poll, 4000);
+  }
+  checkExisting();
+})();
+</script>
+
+  <main>
+    
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/dread.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>dread</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to feel deep fear or anxiety about something that is going to happen.</p>
+              <p class="source">S1E2 — Rachel about returning Barry&#x27;s ring: &quot;Like I wasn&#x27;t dreading tomorrow enough.&quot;</p>
+              <p class="why">stronger and more emotional than *fear* or *worry about* — pairs naturally with future events (*dread Monday morning*, *dread the meeting*).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/anecdote.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>anecdote</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a short, often personal story told to illustrate a point or amuse.</p>
+              <p class="source">S1E2 — Mrs. Geller to Ross: &quot;Any stories? No news, no little anecdotes to share with the folks?&quot;</p>
+              <p class="why">essential for sounding sophisticated in conversation and writing — *a funny anecdote*, *a personal anecdote*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/shoot-for-the-stars.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>shoot for the stars</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to set very high goals; to aim for extraordinary success.</p>
+              <p class="source">S1E2 — Mrs. Geller: &quot;People like Ross need to shoot for the stars.&quot;</p>
+              <p class="why">classic American motivational idiom — common in interviews, speeches, and self-help contexts.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/roll-with-the-punches.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>roll with the punches</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to adapt calmly to difficult or unexpected situations rather than resisting them.</p>
+              <p class="source">S1E2 — Carol about naming the baby: &quot;Things change. Roll with the punches.&quot;</p>
+              <p class="why">a boxing metaphor that&#x27;s everyday English — shows resilience and flexibility. Useful in work and life contexts.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/cheap-shot.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>cheap shot</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">an unfair, mean, or low remark — often aimed at someone&#x27;s weakness.</p>
+              <p class="source">S1E2 — Rachel after insulting Mindy&#x27;s looks on the phone: &quot;That was a cheap shot, but I feel so much better now!&quot;</p>
+              <p class="why">comes from sports but used in all argument/debate contexts. Knowing it lets you spot when someone&#x27;s playing dirty.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/well-up.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>well up</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">(of tears or emotion) to rise and fill the eyes; to be on the verge of crying.</p>
+              <p class="source">S1E2 — Susan to Monica during the sonogram: &quot;Are you welling up?&quot;</p>
+              <p class="why">the precise English phrasal for &quot;almost crying&quot; — more vivid than *getting emotional*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/stomp-on.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>stomp on</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to step on heavily; figuratively, to crush someone&#x27;s feelings or hopes.</p>
+              <p class="source">S1E2 — Rachel rehearsing for Barry: &quot;I&#x27;m the girl that stomped on your heart.&quot;</p>
+              <p class="why">very emotional figurative usage — *stomp on someone&#x27;s dreams / heart / pride*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/latch-on.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>latch on</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to fix attention on something obsessively; to grab onto an idea and not let go.</p>
+              <p class="source">S1E2 — Monica about her mother bringing up lasagna: &quot;He latches on.&quot;</p>
+              <p class="why">describes obsessive focus — common in family/personality talk and tech (*users latched on to the new feature*).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/fluff.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>fluff</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to shake or pat something soft (a pillow, hair, feathers) to make it look fuller.</p>
+              <p class="source">S1E2 — Chandler: &quot;She already fluffed that pillow.&quot;</p>
+              <p class="why">specific everyday verb — also figurative as a noun (*fluff* = meaningless filler content).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/ammunition.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>ammunition</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">literally bullets/shells; figuratively, facts or arguments used to attack someone.</p>
+              <p class="source">S1E2 — Monica about her parents: &quot;I just don&#x27;t wanna give them any more ammunition.&quot;</p>
+              <p class="why">the figurative sense is everywhere in political and personal arguments — *give the opposition ammunition*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/take-the-heat-off.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>take the heat off</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to deflect attention, blame, or pressure away from someone.</p>
+              <p class="source">S1E2 — Monica to Ross about announcing Carol&#x27;s pregnancy: &quot;It might take the heat off of me.&quot;</p>
+              <p class="why">essential office/family idiom — also flipped as *the heat is on* (= under pressure).</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/leave-at-the-altar.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>leave at the altar</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to abandon a partner at their wedding, often by failing to show up; figuratively, to back out of any commitment at the last moment.</p>
+              <p class="source">S1E2 — Mrs. Geller to Rachel: &quot;At least she had the chance to leave a man at the altar.&quot;</p>
+              <p class="why">vivid wedding-day idiom that extends to business deals (*left at the altar by the buyer*) and politics.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/chubby.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>chubby</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">slightly fat in a soft, often cute way — usually used of children, cheeks, or fingers.</p>
+              <p class="source">S1E2 — Mr. Geller to Monica: &quot;Even when you were a chubby kid you had no friends.&quot;</p>
+              <p class="why">gentler than *fat*, more specific than *overweight* — common in everyday body descriptions.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/dump.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>dump</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to end a romantic relationship abruptly, usually as the one who leaves.</p>
+              <p class="source">S1E2 — Ross to Rachel: &quot;as someone who&#x27;s recently been dumped.&quot; / Rachel: &quot;I dumped him.&quot;</p>
+              <p class="why">the standard informal verb for breakups in American English — the active/passive contrast (*I dumped him* vs *I got dumped*) tells the whole story.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/settle-for.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>settle for</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to accept something less than what you really wanted, often reluctantly.</p>
+              <p class="source">S1E2 — Rachel about her ring possibly going to Mindy: &quot;Like she&#x27;d settle for that.&quot;</p>
+              <p class="why">key relationship and career vocabulary — *don&#x27;t settle for less*, *settle for a draw*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/border-on.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>border on</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to come very close to being a particular (usually negative) thing.</p>
+              <p class="source">S1E2 — Ross about the proposed baby name Helen Willick Bunch Geller: &quot;I think that borders on child abuse.&quot;</p>
+              <p class="why">elegant hedge — lets you say something is *almost* X without fully committing. *Borders on rude / genius / absurd*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/driven.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>driven</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">highly motivated and determined to succeed, often to the point of obsession.</p>
+              <p class="source">S1E2 — Phoebe describing her sister: &quot;She&#x27;s this high-powered, driven, career-type.&quot;</p>
+              <p class="why">standard CV and character-description adjective in professional English — pairs with *ambitious*, *focused*, *high-achieving*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-2/tilt.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>tilt</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to move something into a sloping position; to tip or lean.</p>
+              <p class="source">S1E2 — Chandler at the sonogram: &quot;If you tilt your head and relax your eyes, it kind of looks like an old potato.&quot;</p>
+              <p class="why">precise physical verb — used for heads, cameras, balance, and figuratively for opinion shifts (*the polls have tilted left*).</p>
+            </article>
+            
+  </main>
+</body>
+</html>
