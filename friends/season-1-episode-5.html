@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Season 1 — vocabulary</title>
+<style>
+  :root {
+    --bg: #f6f2ea;
+    --ink: #2b2622;
+    --muted: #6b625b;
+    --card: #fffdf8;
+    --line: #e6dfd2;
+    --accent: #8a4b3b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Newsreader", Georgia, serif;
+    padding: 48px 24px 96px;
+  }
+  header.page {
+    max-width: 1200px; margin: 0 auto 40px;
+  }
+  header.page h1 {
+    margin: 0 0 8px;
+    font-size: 2.4rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  header.page p {
+    margin: 0; color: var(--muted); font-size: 1rem;
+  }
+  main {
+    max-width: 1200px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(40,30,20,0.08);
+  }
+  .image {
+    aspect-ratio: 1 / 1;
+    background: #ede5d6;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .emoji { font-size: 5rem; opacity: 0.45; }
+  .card header { padding: 16px 18px 4px; }
+  .card h2 {
+    margin: 0 0 6px; font-size: 1.4rem; letter-spacing: -0.01em;
+  }
+  .meta { display: flex; gap: 8px; align-items: center; }
+  .pos {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem; color: var(--muted); text-transform: lowercase;
+  }
+  .cefr {
+    color: white; font-size: 0.7rem; font-weight: 600;
+    padding: 2px 8px; border-radius: 999px; letter-spacing: 0.04em;
+  }
+  .defn {
+    margin: 12px 18px 8px;
+    font-size: 0.98rem; line-height: 1.5;
+  }
+  .source {
+    margin: 0 18px 8px;
+    font-size: 0.85rem; color: var(--muted);
+    font-style: italic;
+  }
+  .why {
+    margin: 8px 18px 18px;
+    font-size: 0.85rem; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 10px;
+  }
+  
+.podcast {
+  max-width: 1200px;
+  margin: 0 auto 28px;
+  background: #fdf6e4;
+  border: 1px solid #e6dac0;
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.podcast-inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  flex-wrap: wrap;
+}
+.podcast-meta { display: flex; flex-direction: column; gap: 2px; }
+.podcast-meta .label {
+  font-size: 0.7rem; color: #8a4b3b;
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+.podcast-meta .title { font-size: 1.05rem; color: #2b2622; }
+.podcast-action { flex: 1; min-width: 240px; }
+.podcast-action audio { width: 100%; }
+.pod-btn {
+  font: inherit; cursor: pointer;
+  background: #2b2622; color: #f6f2ea; border: none;
+  padding: 10px 16px; border-radius: 8px; font-weight: 600;
+}
+.pod-btn:hover { background: #8a4b3b; }
+.pod-status { color: #6b625b; font-size: 0.92rem; font-style: italic; }
+.pod-error { color: #9b3b3b; font-size: 0.88rem; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
+.pod-actions {
+  display: flex; gap: 16px; margin-top: 8px;
+}
+.pod-regen, .pod-download {
+  font-size: 0.78rem; color: #6b625b;
+  background: none; border: none; cursor: pointer;
+  text-decoration: underline; padding: 0;
+  font-family: inherit;
+}
+.pod-regen:hover, .pod-download:hover { color: #8a4b3b; }
+.pod-download { text-decoration: underline; }
+
+  header.page .crumb {
+    font-size: 0.85rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.1em;
+    margin-bottom: 8px;
+  }
+  header.page .crumb a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  header.page .crumb a:hover { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+  <header class="page">
+    <div class="crumb"><a href="../index.html">← All shows</a> · <a href="index.html">Friends</a></div>
+    <h1>Season 1 — vocabulary</h1>
+    <p>18 advanced (C1/C2) words and phrases. Hover a card for emphasis. Open in any modern browser.</p>
+  </header>
+  
+<section class="podcast" data-slug="friends" data-section="season-1-episode-5" data-audio="audio/season-1-episode-5.mp3">
+  <div class="podcast-inner">
+    <div class="podcast-meta">
+      <span class="label">Audio overview</span>
+      <span class="title">Short NotebookLM podcast for this page</span>
+    </div>
+    <div class="podcast-action">Checking…</div>
+  </div>
+</section>
+<script>
+(function() {
+  const el = document.currentScript.previousElementSibling;
+  const slug = el.dataset.slug, section = el.dataset.section, audioRel = el.dataset.audio;
+  const action = el.querySelector('.podcast-action');
+  const SERVER = 'http://127.0.0.1:8765';
+
+  async function checkExisting() {
+    try {
+      const r = await fetch(audioRel, { method: 'HEAD' });
+      if (r.ok) return showPlayer(audioRel);
+    } catch (_) {}
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'generating') return showGenerating();
+        if (data.status === 'error') return showError(data.message || 'last attempt failed');
+      }
+    } catch (_) {}
+    showButton();
+  }
+  function showPlayer(url) {
+    const filename = slug + '-' + section + '.mp3';
+    action.innerHTML =
+      '<audio controls src="' + url + '"></audio>' +
+      '<div class="pod-actions">' +
+        '<a class="pod-download" href="' + url + '" download="' + filename + '">⬇ Download</a>' +
+      '</div>';
+  }
+  function showButton() {
+    action.innerHTML = '<button class="pod-btn">🎧 Generate podcast</button>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  function showGenerating() {
+    action.innerHTML = '<div class="pod-status">Generating podcast via NotebookLM… (a few minutes)</div>';
+    poll();
+  }
+  function showError(msg) {
+    action.innerHTML = '<div class="pod-error"><span>Error: ' + msg + '</span><button class="pod-btn">Retry</button></div>';
+    action.querySelector('button').onclick = function() { generate(false); };
+  }
+  async function generate(force) {
+    showGenerating();
+    try {
+      const r = await fetch(SERVER + '/podcast', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ slug: slug, section: section, force: !!force })
+      });
+      if (!r.ok) {
+        let d = {}; try { d = await r.json(); } catch (_) {}
+        return showError(d.message || ('server returned ' + r.status));
+      }
+    } catch (_) {
+      return showError('local server not running — start it with: python3 ~/.claude/skills/english/scripts/server.py');
+    }
+    poll();
+  }
+  async function poll() {
+    try {
+      const r = await fetch(SERVER + '/podcast/status?slug=' + encodeURIComponent(slug) + '&section=' + encodeURIComponent(section));
+      if (r.ok) {
+        const data = await r.json();
+        if (data.status === 'ready') return showPlayer(data.url || audioRel);
+        if (data.status === 'error') return showError(data.message || 'generation failed');
+      }
+    } catch (_) {}
+    setTimeout(poll, 4000);
+  }
+  checkExisting();
+})();
+</script>
+
+  <main>
+    
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/maneuver.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>maneuver</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a skilful or clever movement or action, often requiring planning.</p>
+              <p class="source">S1E5 — Chandler marvelling at bra removal: &quot;You reach in, there&#x27;s one maneuver and bam!&quot;</p>
+              <p class="why">used physically (driving, sports) and figuratively (politics, business — *a clever maneuver*). British spelling: *manoeuvre*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/rot-in-hell.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>rot in hell</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a bitter curse wishing lasting suffering on someone you despise.</p>
+              <p class="source">S1E5 — Phoebe about an ex: &quot;Except for Kevin Millmore, may he rot in hell.&quot;</p>
+              <p class="why">strong, dramatic expression of contempt — common in film, argument, and dark humour. Knowing its weight stops you using it casually.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/gang-up-on.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>gang up on</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to join with others to attack, criticise, or pressure one person.</p>
+              <p class="source">S1E5 — Chandler about breaking up with Janice together: &quot;She&#x27;d feel like we&#x27;re ganging up on her.&quot;</p>
+              <p class="why">core social-dynamics vocabulary — *don&#x27;t gang up on me*, *they ganged up on the new kid*. Implies unfair numbers.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/burn-someone-up.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>burn someone up</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">(informal) to make someone very angry or annoyed.</p>
+              <p class="source">S1E5 — Rachel about her father: &quot;That guy, he burns me up.&quot;</p>
+              <p class="why">vivid informal anger idiom — distinct from literal burning. Pairs with *that really burns me up*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/eager.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>eager</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">keen and impatient to do or have something; full of enthusiasm.</p>
+              <p class="source">S1E5 — Joey before approaching Angela: &quot;I don&#x27;t wanna seem too eager.&quot;</p>
+              <p class="why">key word for describing motivation — *eager to please*, *eager to learn*. Pairs with the noun phrase *an eager beaver*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/accent.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>accent</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to emphasise or draw attention to a feature; to make something stand out.</p>
+              <p class="source">S1E5 — Angela: &quot;I&#x27;m wearing a dress that accents my boobs.&quot;</p>
+              <p class="why">the verb sense (≠ the noun &quot;accent&quot; = pronunciation) is common in fashion, design, and cooking — *accent the waist*, *accented with gold*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/glamour.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>glamour</h2>
+                <div class="meta">
+                  <span class="pos">n</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">an attractive, exciting quality of luxury, beauty, or sophistication.</p>
+              <p class="source">S1E5 — Rachel sarcastically: &quot;Big glamour night. Me and Monica at Launderama.&quot;</p>
+              <p class="why">evocative noun with adjective *glamorous* — used for celebrities, fashion, travel. Note the British -our spelling kept even in American English.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/freakish.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>freakish</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">very strange, abnormal, or unusual to the point of being startling.</p>
+              <p class="source">S1E5 — Joey: &quot;You wanna hear a freakish coincidence?&quot;</p>
+              <p class="why">stronger than *strange* — *a freakish accident*, *freakishly tall*. Related to *freak* (already known) but more formal in tone.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/sophisticated.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>sophisticated</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">worldly, refined, and culturally aware; also (of systems) complex and advanced.</p>
+              <p class="source">S1E5 — Angela describing Bob: &quot;He&#x27;s smart, sophisticated, and he has a real job.&quot;</p>
+              <p class="why">dual use — describing people (*a sophisticated palate*) and technology (*a sophisticated algorithm*). Essential review/writing vocabulary.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/belch.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>belch</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to noisily release air from the stomach through the mouth; to burp.</p>
+              <p class="source">S1E5 — Monica about a bad date: &quot;your cousin who could belch the alphabet.&quot;</p>
+              <p class="why">more formal/literary than *burp* — also figurative (*the factory belched smoke*). Knowing both registers is useful.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/one-of-a-kind.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>one of a kind</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">unique; the only one of its type, with no equal.</p>
+              <p class="source">S1E5 — Joey about Angela: &quot;She&#x27;s like one of a kind, like a snowflake.&quot;</p>
+              <p class="why">common compliment and marketing phrase — *a one-of-a-kind opportunity*, *truly one of a kind*. Hyphenated when used before a noun.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/fuzzy.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>fuzzy</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">covered in soft short hairs or fibres; also blurred, unclear, or imprecise.</p>
+              <p class="source">S1E5 — Joey defending his fabric softener: &quot;like a little fuzzy bear.&quot;</p>
+              <p class="why">two senses — physical (*a fuzzy sweater*) and abstract (*fuzzy logic*, *the details are fuzzy*). Both very common.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/supremely.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>supremely</h2>
+                <div class="meta">
+                  <span class="pos">adv</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">to the highest possible degree; extremely.</p>
+              <p class="source">S1E5 — Janice: &quot;I had the most supremely awful day.&quot;</p>
+              <p class="why">strong intensifier with a slightly formal/dramatic flavour — *supremely confident*, *supremely talented*. Lifts your register above *very*.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/blow-off.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>blow off</h2>
+                <div class="meta">
+                  <span class="pos">phrasal verb</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">(informal) to deliberately ignore or skip something, or to treat someone dismissively.</p>
+              <p class="source">S1E5 — Janice: &quot;I blew off the afternoon. I went shopping.&quot;</p>
+              <p class="why">very common American phrasal — *blow off a meeting*, *blow off steam* (different sense), *he blew me off*. Signals casual disregard.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/brutal.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>brutal</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">savagely violent; also used informally for anything harsh, painful, or unpleasant.</p>
+              <p class="source">S1E5 — Joey about Chandler&#x27;s hug with Janice: &quot;the hug looked pretty brutal.&quot;</p>
+              <p class="why">hugely versatile in modern English — *a brutal workout*, *brutal honesty*, *brutally cold*. The informal &quot;very tough&quot; sense is everywhere.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/judgment-call.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>judgment call</h2>
+                <div class="meta">
+                  <span class="pos">idiom</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">a decision based on personal opinion rather than fixed rules, because no clear answer exists.</p>
+              <p class="source">S1E5 — Ross on which load white cotton panties belong in: &quot;That would be a judgment call.&quot;</p>
+              <p class="why">essential workplace and everyday phrase — *I had to make a judgment call*. Signals discretion under uncertainty.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/rambunctious.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>rambunctious</h2>
+                <div class="meta">
+                  <span class="pos">adj</span>
+                  <span class="cefr" style="background:#9b3b3b">C2</span>
+                </div>
+              </header>
+              <p class="defn">noisy, energetic, and difficult to control; boisterous in a playful way.</p>
+              <p class="source">S1E5 — Joey to Monica: &quot;Like you&#x27;ve never got a little rambunctious with Ross.&quot;</p>
+              <p class="why">colourful, slightly literary adjective for wild energy — *rambunctious kids*, *a rambunctious crowd*. Marks an advanced vocabulary.</p>
+            </article>
+            
+            <article class="card">
+              <div class="image"><img src="assets/season-1-episode-5/grieve.jpg" alt="" loading="lazy"></div>
+              <header>
+                <h2>grieve</h2>
+                <div class="meta">
+                  <span class="pos">v</span>
+                  <span class="cefr" style="background:#c98a4b">C1</span>
+                </div>
+              </header>
+              <p class="defn">to feel or express deep sorrow, especially over a loss or death.</p>
+              <p class="source">S1E5 — Joey explaining Chandler&#x27;s absence: &quot;He needed time to grieve.&quot;</p>
+              <p class="why">the precise verb for processing loss — *grieve for/over someone*. Related noun *grief* and adjective *grief-stricken*. Used literally and humorously.</p>
+            </article>
+            
+  </main>
+</body>
+</html>
