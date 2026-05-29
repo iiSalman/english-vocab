@@ -1,4 +1,6 @@
 {
-  "status": "generating",
-  "started_at": "2026-05-29T10:00:20"
+  "status": "ready",
+  "notebook_id": "eefb8554-6280-4dc3-8487-75d75edf578e",
+  "artifact_id": "05d80888-8132-4a42-b91c-3b58e3ffa0dc",
+  "generated_at": "2026-05-29T10:10:02"
 }
