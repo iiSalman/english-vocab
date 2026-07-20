@@ -1,5 +1,6 @@
 {
-  "status": "error",
-  "message": "audio generation timed out or failed",
-  "failed_at": "2026-07-20T17:09:24"
+  "status": "ready",
+  "notebook_id": "0bf640c8-e1b2-4aa6-a27f-c734fe19dea5",
+  "artifact_id": "a9bcac25-0196-4973-ade8-056e19ac3e85",
+  "generated_at": "2026-07-20T21:10:25"
 }
