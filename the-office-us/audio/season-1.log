@@ -1,0 +1,2 @@
+[err] artifact wait: 20:09:24 ERROR [notebooklm._core] RPC LIST_ARTIFACTS failed after 1.258s: [Errno 8] nodename nor servname provided, or not known
+[err] audio generation timed out or failed

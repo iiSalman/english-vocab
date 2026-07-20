@@ -1,0 +1,5 @@
+{
+  "status": "error",
+  "message": "could not create or find NotebookLM notebook (run `notebooklm login`?)",
+  "failed_at": "2026-07-20T19:47:54"
+}
