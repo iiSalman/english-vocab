@@ -1,5 +1,6 @@
 {
-  "status": "error",
-  "message": "could not create or find NotebookLM notebook (run `notebooklm login`?)",
-  "failed_at": "2026-07-20T19:47:54"
+  "status": "ready",
+  "notebook_id": "fbccee9c-5297-4b4f-bf47-22365af6cf51",
+  "artifact_id": "be935252-226b-4479-8aee-29f0f87923fb",
+  "generated_at": "2026-07-21T17:21:01"
 }
